@@ -1,0 +1,28 @@
+Questions:
+
+1.What other scenarios would you suggest for the given page? List 3-5 suggestions.
+ Scenarios: 
+ a) Verify 'your income' , 'living expenses' field values > 0
+ b) Verify fields accept the right datatype (Int)
+ c) Verify fields does not accept negative values
+ d) Verify page is accessible on different browsers
+ e) Verify minimum and maximum values accepted by each fields
+ 
+2.If this test was part of a much larger test suite, how could you run a specific test or subset/group of tests?
+Using the testNg framework which helps grouping and prioritising the testcases
+
+3.Which approaches could be used to reduce the overall execution time? Describe how they could be implemented into your code base.
+a)Using TestNG framework and using the parameter parallel 
+b)Use explicit waits and fluent wait whereever needed
+
+4.Sometimes UI tests can fail unpredictably. For example, the page may not have fully loaded before the automated test attempts to click a button on a web page. How would you improve reliability of these tests without increasing execution time?
+a)Make sure page is loaded fully using javascript executor 
+JavascriptExecutor executor = (JavascriptExecutor) driver;
+            executor.executeScript("window.scrollTo(0, document.body.offsetHeight)");
+            readyStateComplete = (String) executor.executeScript("return document.readyState") == "complete"
+b) Use appropriate expected condition in explicitwait  (invisibilityOfTheElementLocated(), presenceOfElementLocated())
+c) In general (for any tool) set the timeout/wait accordingly
+			
+5.From your experience, what is the focus of UI automation testing – Integration, Functional or Acceptance testing? Briefly explain why.
+Main focus of UI automation testing is to check against functionl specifications:  is to ensure the functionalities of software application work as per specifications by checking screens and controls like menus, buttons, icons, pagination, allignment, fonts rendering, colors, window resize, positioning  etc.
+

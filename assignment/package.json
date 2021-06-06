@@ -1,0 +1,27 @@
+{
+  "name": "assignment",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "./node_modules/.bin/cucumber-js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "selenium-webdriver": "^4.0.0-beta.3"
+  },
+  "devDependencies": {
+    "@cucumber/cucumber": "^7.2.1",
+    "ansi-escapes": "^4.3.2",
+    "ansi-styles": "^4.3.0",
+    "chalk": "^4.1.1",
+    "cucumber-junit": "^1.7.1",
+    "figures": "^3.2.0",
+    "glob": "^7.1.7",
+    "rest-assured": "^0.1.0",
+    "rimraf": "^3.0.2",
+    "type-fest": "^0.21.3"
+  }
+}
